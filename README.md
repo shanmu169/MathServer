@@ -100,6 +100,7 @@ from mathapp import views
 urlpatterns = [
     path('',views.mileage,name='mileage'),
 ]
+```
 
 
 ## OUTPUT - SERVER SIDE:
