@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>MILEAGE CALCULATION</title>
+        <style>
+        body
+        {background: linear-gradient(rgba(255,201,225,1),rgb(185, 141, 220),rgba(148,187,233,1));
+        }
+        .box
+        {width:400px;
+        height:300px;
+        background-color: rgb(255, 123, 123);
+        border: dashed 3px rgb(50, 50, 51);
+        padding: 10px;
+        margin-left:200px;
+        margin-top:150px;
+        position: fixed;
+        top:100px;
+        left:300px;
+        }
+        .result 
+        {
+            font-weight: bold;
+        }
+        </style>
+    </head>
+ 
+    <body>
+        <div class="box">
+             <h2 align="center">MILEAGE CALCULATOR</h2>
+             <h3 align="center">SHANMUGA PRIYA.K(25004352)</h3>
+              <form method="post">
+                {% csrf_token %}
+                <label>Distance</label>
+                <input type="number" name="Distance">km 
+                <br>
+                <br>
+                <label>Feul Consumed</label>
+                <input type="number" name="feulconsumed">L
+                <br>
+                <br>
+                <button type="submit">calculate</button>
+                <br>
+                <br>
+                <label>Mileage</label>
+                <input class ='result' type="number" name="Mileage" value="{{mileage}}">Km/L
+            </form>
+        </div>
+    </body>
+</html>
